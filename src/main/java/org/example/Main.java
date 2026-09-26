@@ -39,7 +39,7 @@ public class Main{
                     direction = Direction.WEST;
                     break;
                 default:
-                    throw new Error("неизвестное направление: " + directionStr);
+                    throw new IllegalArgumentException("unknown direction");
             }
             System.out.println("monster number: " + i + ", start pos(" + x + ", " + y + ")");
 

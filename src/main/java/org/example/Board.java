@@ -14,7 +14,12 @@ public class Board {
     }
 
     public int getVisits(int x, int y){
-        return visits[y - 1][x - 1];
+        if(isInside(x, y)) {
+            return visits[y - 1][x - 1];
+        }
+        else{
+            throw new IllegalArgumentException("you gone beyond out of board");
+        }
     }
 
     public int countCells(){
